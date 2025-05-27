@@ -17,4 +17,4 @@ alerting:
   alertmanagers:
     - static_configs:
 #        - targets: ['host.docker.internal:9093']
-        - targets: ['alert:9093']
+        - targets: ['alertmanager:9093']
