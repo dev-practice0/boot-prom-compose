@@ -1,0 +1,8 @@
+route:
+  receiver: slack
+
+receivers:
+  - name: slack
+    slack_configs:
+      - api_url: "<SLACK_WEBHOOK_URL>"
+        text: "{{ .CommonAnnotations.summary }} - {{ .CommonAnnotations.description }}"
