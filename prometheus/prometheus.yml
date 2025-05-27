@@ -6,3 +6,13 @@ scrape_configs:
     static_configs:
       - targets: ['host.docker.internal:8080'] # intellj로 실행 중이거나 별도 네트워크 없이 직접 연결하겠다
     metrics_path: '/actuator/prometheus'
+
+# alert manager
+
+rule_files:
+  - "alert.rules.yml"
+
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets: ['host.docker.internal:9093']
