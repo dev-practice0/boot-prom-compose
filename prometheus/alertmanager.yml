@@ -4,5 +4,8 @@ route:
 receivers:
   - name: slack
     slack_configs:
-      - api_url: "<SLACK_WEBHOOK_URL>"
+      # - api_url: "https://hooks.slack.com/services/..."
+      - api_url: '${SLACK_WEBHOOK_URL}'
+        channel: 'aibe-1-학습질문'
+        send_resolved: true
         text: "{{ .CommonAnnotations.summary }} - {{ .CommonAnnotations.description }}"
