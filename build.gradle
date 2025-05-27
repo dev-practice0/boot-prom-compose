@@ -33,6 +33,7 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
     // 추가 의존성
+    implementation 'io.micrometer:micrometer-core'
     runtimeOnly 'org.aspectj:aspectjweaver'
 }
 

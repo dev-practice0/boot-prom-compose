@@ -8,7 +8,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class CountedController {
 
-    @Counted(value = "give.me.money", description = "부자가 되고 싶어요")
+    @Counted(
+            value = "give_me_money",
+            description = "부자가 되고 싶어요")
     @GetMapping("/counted")
     public String getCounted() {
         return "Counted OK";
